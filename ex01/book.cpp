@@ -1,46 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   book.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/13 12:57:44 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/13 13:16:19 by amorion-         ###   ########.fr       */
+/*   Created: 2022/03/15 13:25:43 by amorion-          #+#    #+#             */
+/*   Updated: 2022/03/15 13:54:43 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<iostream>
+#include "book.hpp"
+#include "contact.hpp"
 
-char	*ft_upper(char * str)
+book::book(void)
 {
-	int i;
-
-	i = 0;
-	while(str && str[i])
-	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			str[i] = str[i] - 'a' + 'A';
-		i++;
-	}
-	return(str);
+	this->used = 0;
 }
 
-int main(int argc, char **argv)
+book::~book(void)
 {
-	int	i;
+	return;
+}
 
-	i = 1;
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-	else
-	{
-		while(argv[i])
-		{
-			std::cout << ft_upper(argv[i]);
-			i++;
-		}
-		std::cout << "\n";
-	}
-	return(0);
+void	book::ft_search(void)
+{
+	return;
+}
+
+void	book::ft_add(void)
+{
+	return;
 }
