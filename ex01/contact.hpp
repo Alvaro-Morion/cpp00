@@ -6,7 +6,7 @@
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 12:57:34 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/15 13:22:29 by amorion-         ###   ########.fr       */
+/*   Updated: 2022/03/19 12:50:03 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ public:
 	std::string apodo;
 	std::string telefono;
 	std::string secreto;
-	int index;
+
+	void	ft_print_table(int index);
+	void	ft_print_complete(void);
 
 };
 #endif

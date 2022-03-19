@@ -6,7 +6,7 @@
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 12:47:52 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/15 13:54:05 by amorion-         ###   ########.fr       */
+/*   Updated: 2022/03/19 12:50:12 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 	contact contact[8];
 	int used;
 
-	void	ft_search(void);
-	void	ft_add(void);
+	void	search(void);
+	void	add(void);
 };
 #endif

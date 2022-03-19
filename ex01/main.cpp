@@ -6,7 +6,7 @@
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 13:53:32 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/15 13:57:17 by amorion-         ###   ########.fr       */
+/*   Updated: 2022/03/19 13:19:00 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,14 @@
 #include<string>
 #include "book.hpp"
 
+void	ft_leaks(void)
+{
+	system("leaks Contacts");
+}
+
 int main(void)
 {
+	atexit(ft_leaks);
 	std::string input;
 	book mybook;
 	while(1)
@@ -25,9 +31,9 @@ int main(void)
 		if(!input.compare("EXIT"))
 			break;
 		else if(!input.compare("SEARCH"))
-			book.search();
+			mybook.search();
 		else if(!input.compare("ADD"))
-			book.add();
+			mybook.add();
 		else
 			std::cout << "Invalid parmeter\n";
 	}
