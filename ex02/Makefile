@@ -5,20 +5,20 @@
 #                                                     +:+ +:+         +:+      #
 #    By: amorion- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/19 13:03:00 by amorion-          #+#    #+#              #
-#    Updated: 2022/03/20 09:22:34 by amorion-         ###   ########.fr        #
+#    Created: 2022/03/20 09:14:58 by amorion-          #+#    #+#              #
+#    Updated: 2022/03/20 10:33:25 by amorion-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = contact.cpp main.cpp book.cpp
+SRCS = tests.cpp Account.cpp
 
-NAME = Contacts
+OBJS = $(SRCS:.cpp=.o)
 
 CC = clang++
 
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -std=c++98 -Wall -Werror -Wextra
 
-OBJS = $(SRCS:.cpp=.o)
+NAME = test
 
 all: $(NAME)
 
@@ -26,15 +26,17 @@ all: $(NAME)
 	@$(CC) $(FLAGS) -c $< -o ${<:.cpp=.o}
 
 $(NAME): $(OBJS)
-	@$(CC) $(FLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 	@echo "Binary generated"
-clean:
+
+clean: 
 	@rm -rf $(OBJS)
 	@echo "Object files deleted"
+
 fclean: clean
 	@rm -rf $(NAME)
-	@echo "Binary deleted"
+	@echo "Binary file deleted"
+
 re: fclean all
 
 .PHONY: re fclean clean all
-
